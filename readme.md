@@ -18,7 +18,7 @@ This is a Django-based project for recommending movies using various algorithms 
 
 1. **Clone the repository:**
     ```sh
-    git clone https://github.com/your-username/movie-recommendation-system.git
+    git clone https://github.com/ZakariaZhlat125/Movie_Recommendations.git
     cd movie-recommendation-system
     ```
 
