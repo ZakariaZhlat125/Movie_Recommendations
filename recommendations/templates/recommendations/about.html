@@ -1,0 +1,92 @@
+{% extends 'recommendations/base.html' %} {% block title %}About the
+Algorithms{% endblock %} {% block content %}
+<h2>About Movie Recommendation Algorithms</h2>
+
+<div class="card mb-4">
+  <div class="card-header bg-success text-white">
+    <h3>Content-Based Filtering</h3>
+  </div>
+  <div class="card-body">
+    <p>
+      Content-Based Filtering recommends movies based on the attributes of the
+      movie itself. This method relies on analyzing the content of movies to
+      find similarities. Key features such as genre, actors, directors, and
+      specific keywords (like “thrilling” or “romantic”) are used to recommend
+      movies that share similar characteristics with ones you have enjoyed
+      previously.
+    </p>
+    <p>
+      <strong>Example:</strong> If you enjoyed the movie "Inception," which is a
+      sci-fi thriller directed by Christopher Nolan and stars Leonardo DiCaprio,
+      a content-based recommender might suggest other sci-fi thrillers or movies
+      directed by Christopher Nolan.
+    </p>
+    <p>
+      <strong>Sports Analogy:</strong> Imagine you’re a fan of basketball and
+      you love watching players who are known for their exceptional defensive
+      skills and agility, like Kawhi Leonard. A content-based system might
+      suggest watching other players or games that highlight strong defensive
+      strategies or similar player profiles.
+    </p>
+  </div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-header bg-success text-white">
+    <h3>K-Nearest Neighbors (KNN)</h3>
+  </div>
+  <div class="card-body">
+    <p>
+      K-Nearest Neighbors (KNN) is a collaborative filtering algorithm that
+      recommends movies based on the preferences of users who have similar taste
+      profiles to you. This method does not require explicit attributes of the
+      movies but instead looks at the behavior of users. It finds users with
+      similar rating patterns and recommends movies that those users have rated
+      highly.
+    </p>
+    <p>
+      <strong>Example:</strong> If you and another user both rated several
+      action movies highly, and that user also loved the movie "Mad Max: Fury
+      Road," the KNN algorithm might suggest "Mad Max: Fury Road" to you, even
+      if you haven’t watched it yet.
+    </p>
+    <p>
+      <strong>Sports Analogy:</strong> Think of a soccer team’s scouting
+      department looking for new players. They might look at players who have
+      performed well in teams with similar play styles and formations. If your
+      favorite team excels with fast-paced, high-pressing tactics, scouts might
+      recommend players from other teams that use similar tactics and have
+      players with strong performances in those areas.
+    </p>
+  </div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-header bg-success text-white">
+    <h3>Hybrid Approaches</h3>
+  </div>
+  <div class="card-body">
+    <p>
+      Hybrid recommendation systems combine both content-based and collaborative
+      filtering techniques to provide more accurate and diverse suggestions. By
+      leveraging the strengths of both methods, hybrid systems can recommend
+      movies that are similar to those you like and also introduce you to new
+      genres or types based on the preferences of similar users.
+    </p>
+    <p>
+      <strong>Example:</strong> A hybrid system might suggest a mix of sci-fi
+      thrillers like "Interstellar" (based on your liking for "Inception") and
+      highly rated action movies from other users with similar tastes, like "Mad
+      Max: Fury Road."
+    </p>
+    <p>
+      <strong>Sports Analogy:</strong> In sports, hybrid scouting approaches are
+      common. For example, a basketball team might combine player statistics
+      (content-based) with scouting reports and performance reviews from other
+      teams or leagues (collaborative filtering) to find the best new recruits
+      who fit both the team’s style and have a proven track record.
+    </p>
+  </div>
+</div>
+
+{% endblock %}

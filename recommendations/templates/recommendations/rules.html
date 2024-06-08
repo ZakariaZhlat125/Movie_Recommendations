@@ -1,0 +1,49 @@
+<!-- movie_analysis/templates/movie_analysis/rules.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apriori Analysis Results</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top Association Rules</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Base Item(s)</th>
+                <th>Added Item</th>
+                <th>Support</th>
+                <th>Confidence</th>
+                <th>Lift</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rule in rules %}
+            <tr>
+                <td>{{ rule.Base }}</td>
+                <td>{{ rule.Add }}</td>
+                <td>{{ rule.Support }}</td>
+                <td>{{ rule.Confidence }}</td>
+                <td>{{ rule.Lift }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

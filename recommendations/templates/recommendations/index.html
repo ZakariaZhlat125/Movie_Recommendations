@@ -1,0 +1,26 @@
+{% extends 'recommendations/base.html' %} {% block title %}Movie
+Recommendations{% endblock %} {% block content %}
+<h2 class="mb-4">Welcome to Movie Recommendations</h2>
+<form method="get" class="form-inline mb-4">
+  <label for="movie" class="mr-2">Enter a movie name:</label>
+  <input type="text" id="movie" name="movie" class="form-control mr-2" />
+  <button type="submit" class="btn btn-success">Get Recommendations</button>
+</form>
+
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %} {% if movie %}
+<h2>Recommendations for "{{ movie }}"</h2>
+<ul class="list-group">
+  {% for recommendation in recommendations %}
+  <li class="list-group-item">
+    <strong>{{ recommendation.title }}</strong>
+    {% if recommendation.imdb_link %} -
+    <a href="{{ recommendation.imdb_link }}" target="_blank">IMDb</a>
+    {% endif %} {% if recommendation.tags|length > 0 %}
+    <p>Tags: {{ recommendation.tags|join:", " }}</p>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %} {% endblock %}
